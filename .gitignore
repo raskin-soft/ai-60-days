@@ -10,6 +10,8 @@ appsettings.*.local.json
 secrets.json
 *.pfx
 *.snk
+*.pem
+*.key
 
 # ===== Visual Studio user-specific files =====
 .vs/
@@ -109,8 +111,9 @@ _NCrunch_*
 # ===== NuGet =====
 *.nupkg
 *.snupkg
-**/[Pp]ackages/*
-!**/[Pp]ackages/build/
+# Anchored to the repo root so source folders named "packages" are not ignored
+/[Pp]ackages/*
+!/[Pp]ackages/build/
 *.nuget.dgspec.json
 
 # ===== Publish output =====
@@ -145,7 +148,6 @@ __queuestorage__/
 *.sqlite
 *.sqlite3
 *.db
-*.bak
 *.dacpac
 *.bacpac
 Migrations/*.local.cs
